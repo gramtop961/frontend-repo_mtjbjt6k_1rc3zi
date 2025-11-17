@@ -1,9 +1,10 @@
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import Window from './Window'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[88vh] pt-24 overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-[92vh] pt-24 overflow-hidden bg-[#0a0a0a]">
       {/* Spline 3D background */}
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/S4k-6fqjuV5AuVZe/scene.splinecode" style={{ width: '100%', height: '100%' }} />
@@ -49,6 +50,20 @@ export default function Hero() {
               </a>
             </motion.div>
           </div>
+
+          {/* Demo macOS window */}
+          <Window title="Fluxo — Preview">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="rounded-xl border border-white/10 bg-black/30 p-3">
+                <div className="text-xs text-slate-400">Project</div>
+                <div className="mt-1 text-sm text-slate-200">Retro Workspace</div>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-black/30 p-3">
+                <div className="text-xs text-slate-400">Status</div>
+                <div className="mt-1 text-sm text-slate-200">In progress</div>
+              </div>
+            </div>
+          </Window>
         </div>
       </div>
     </section>

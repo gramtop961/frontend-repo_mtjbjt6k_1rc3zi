@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Apple, Search, Menu, ChevronDown } from 'lucide-react'
+import { Apple, Search, ChevronDown } from 'lucide-react'
 
 function Clock() {
   const [time, setTime] = useState('')
@@ -32,6 +32,8 @@ export default function MacMenuBar() {
               <button className="text-sm hover:text-white">Window</button>
               <button className="text-sm hover:text-white">Help</button>
             </div>
+            {/* Center app title like macOS */}
+            <div className="hidden md:block text-xs text-slate-300">Fluxo — macOS Mode</div>
             {/* Right side */}
             <div className="flex items-center gap-3">
               <button className="inline-flex items-center gap-1 text-xs text-slate-300 hover:text-white">
@@ -45,11 +47,10 @@ export default function MacMenuBar() {
               <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/10 rounded-md px-2 py-1 text-slate-300">
                 <Search size={14} />
                 <input
-                  placeholder="Search"
+                  placeholder="Spotlight"
                   className="bg-transparent outline-none text-xs placeholder:text-slate-400 w-28"
                 />
               </div>
-              <Menu size={16} className="md:hidden text-slate-300" />
               <Clock />
             </div>
           </div>

@@ -2,6 +2,7 @@ import MacMenuBar from './components/MacMenuBar'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Waitlist from './components/Waitlist'
+import Dock from './components/Dock'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Features />
       <Waitlist />
+      <Dock />
       <footer className="bg-[#0a0a0a] py-10">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400">
           <div className="text-sm">© {new Date().getFullYear()} Fluxo. All rights reserved.</div>
